@@ -13,8 +13,8 @@ export default function LanguageSelect() {
 
   return (
     <div>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel sx={{ color: "white",fontSize:'14px',  }} id="demo-simple-select-standard-label">English</InputLabel>
+      <FormControl variant="standard" sx={{ m: 1, minWidth: 120, color:"white" }}>
+        <InputLabel sx={{ color: "white",fontSize:'14px',  }} id="demo-simple-select-standard-label">LN</InputLabel>
         <Select
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
@@ -22,13 +22,12 @@ export default function LanguageSelect() {
           onChange={handleChange}
           label="Age"
           sx={{ color: "white",fontSize:"14px"}}
-        >
+        > 
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={10}>English</MenuItem>
+          <MenuItem value={20}>Hindi</MenuItem>
         </Select>
       </FormControl>
       
