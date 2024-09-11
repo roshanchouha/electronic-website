@@ -8,11 +8,12 @@ import { categoryData } from "../../service/dataStorage/data";
 import rightArrow from "../../assets/icons/rightArrow.png"
 import HeroBanner from "../../component/common/carsoul/HeroBanner";
 import TodayCarousel from "../../component/todaysProductCar/todayCarousel";
+import Heading from "../../component/common/productHead.jsx/Heading";
 const HomePage = () => {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <div className="bo  w-screen h-screen ">
+    <div className="  w-screen h-screen ">
 
      {/* sale marquee header */}
       <div className="bg-black h-12 text-white flex justify-end items-center ">
@@ -92,8 +93,8 @@ const HomePage = () => {
     
  
         {/* category Hero banner  */}
-       <div className=" lg:w-4/5 h-96 mx-auto  flex  ">
-           <div className="   w-1/5  flex  ">
+       <div className="w-full  lg:w-4/5 h-96 mx-auto  flex flex-col  lg:flex-row md:flex-row ">
+           <div className=" w-full  lg:w-1/5  flex -z-10  ">
                 <div className=" flex flex-col items-start p-0 gap-4  mt-5 w-full">
                    <div className="  w-full flex flex-col justify-between gap-4">  
                    {
@@ -108,7 +109,7 @@ const HomePage = () => {
                    </div>
                 </div>
            </div>
-            <div className=" font-poppins  w-full  ">
+            <div className=" font-poppins  w-full  z-40 ">
                  <div className=" w-auto ml-6 h-[95%] mt-2 flex items-end">
                     <HeroBanner />
                  </div>
@@ -118,9 +119,13 @@ const HomePage = () => {
 
 
           {/* today's sale  */}
-          <div  className=" border border-black w-4/5 h- flex justify-between  items-center p-0 gap-148px mx-auto mt-5">
+          <div  className=" w-4/5  flex justify-between  items-center p-0   mx-auto mt-36 divide-y">
               <TodayCarousel />
-   
+          </div>
+
+          {/* categories */}
+          <div  className=" w-4/5  flex justify-between  items-center p-0   mx-auto mt-36 divide-y">
+              <Heading />
           </div>
     </div>
   );
