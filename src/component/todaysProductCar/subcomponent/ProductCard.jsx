@@ -6,7 +6,7 @@ import videoGameImg from "../../../assets/images/product/videoGame.png"
 
 export const ProductCard = ({image, name , discount ,price }) => {
   return (
-    <div className="w-[250px] h-[300px] ">
+    <div className="w-[250px] h-[300px] shadow p-2 ">
       <div className="  w-full h-3/5 bg-[#f5f5f5] relative flex justify-center items-center rounded">
         <div className=" absolute top-2 left-1 w-14 h-6 flex justify-center items-center text-white font-thin bg-[#DB4444] font-poppins text-xs p-3 rounded">
           {" "}

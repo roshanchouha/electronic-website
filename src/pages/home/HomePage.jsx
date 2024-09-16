@@ -9,6 +9,8 @@ import rightArrow from "../../assets/icons/rightArrow.png"
 import HeroBanner from "../../component/common/carsoul/HeroBanner";
 import TodayCarousel from "../../component/todaysProductCar/todayCarousel";
 import Heading from "../../component/common/productHead.jsx/Heading";
+import { AllProducts } from "../../component/allProduct/AllProducts";
+
 const HomePage = () => {
   const [searchText, setSearchText] = useState("");
 
@@ -126,6 +128,10 @@ const HomePage = () => {
           {/* categories */}
           <div  className=" w-4/5  flex justify-between  items-center p-0   mx-auto mt-36 divide-y">
               <Heading />
+          </div>
+          {/* Over Products */}
+          <div className=" w-4/5 flex justify-between items-center p-0 mx-auto mt-36  ">
+            <AllProducts />
           </div>
     </div>
   );
