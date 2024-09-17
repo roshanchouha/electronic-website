@@ -2,53 +2,32 @@ import React from "react";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import mobileImg from "../../../assets/images/categories/mobile.png";
 import computerImg from "../../../assets/images/categories/computer.png";
-
+import { CiMobile4 } from "react-icons/ci";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
+import { BsSmartwatch } from "react-icons/bs";
+import { PiHeadphonesLight } from "react-icons/pi";
+import { SiYoutubegaming } from "react-icons/si";
+import { AiOutlineCamera } from "react-icons/ai";
 import { Cards } from "./subComponent/Cards";
-
+import { MdOutlinePhoneIphone } from "react-icons/md";
+import Header from "../Heading/Header";
 const Heading = () => {
   return (
-    <div className="w-full h-[483px] ">
+    <div className="w-full h-52 ">
       {/* header */}
-      <div className="flex flex-col gap-3 ">
-        <div className="flex items-center">
-          <div className=" rounded bg-[#DB4444] p-2  h-10"></div>
-          <div>
-            <h3 className=" font-poppins text-[16px] font-semibold  text-[#DB4444] mx-2">
-              Categories
-            </h3>
-          </div>
+      <Header title="Categories" subTitle='Browse By Category'  showShallTime={false}/>
+      
+         {/* cards */}
+         <div className="flex flex-col lg:flex-row  justify-between mt-12">
+           <Cards image={<MdOutlinePhoneIphone />} name="Phone" />
+           <Cards image={<HiOutlineComputerDesktop />} name="Computer" />
+           <Cards image={<BsSmartwatch />} name="Smart Watch" />
+           <Cards image={<PiHeadphonesLight />} name="Head Phone" />
+           <Cards image={<SiYoutubegaming />} name="Gaming" />
+           <Cards image={<AiOutlineCamera />} name="Camera" />
+          
         </div>
-        {/* title */}
-        <div className=" flex items-center justify-between w-full   h-3/4">
-          <div className="flex  items-center ">
-            <h1 className="font-poppins text-3xl font-semibold place-items-end">
-              Browse By Category{" "}
-            </h1>
-          </div>
-
-          <div className="flex gap-3">
-            <div className=" cursor-pointer rounded-full bg-[#F5F5F5] p-3">
-              <MdOutlineKeyboardArrowLeft className="text-xl" />
-            </div>
-            <div className="cursor-pointer rounded-full bg-[#F5F5F5] p-3">
-              <MdOutlineKeyboardArrowLeft className="text-xl rotate-180" />
-            </div>
-          </div>
-        </div>
-
-        {/* cards */}
-        <div className="flex flex-col lg:flex-row  justify-between mt-12">
-           <Cards image={mobileImg} name="Phone" />
-           <Cards image={computerImg} name="Computer" />
-           <Cards image={mobileImg} name="Phone" />
-           <Cards image={mobileImg} name="Phone" />
-           <Cards image={computerImg} name="Computer" />
-           <Cards image={mobileImg} name="Phone" />
-           
-
-
-        </div>
-      </div>
+      
     </div>
   );
 };
