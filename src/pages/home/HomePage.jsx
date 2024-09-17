@@ -10,10 +10,11 @@ import HeroBanner from "../../component/common/carsoul/HeroBanner";
 import TodayCarousel from "../../component/todaysProductCar/todayCarousel";
 import Heading from "../../component/common/productHead.jsx/Heading";
 import { AllProducts } from "../../component/allProduct/AllProducts";
+import Footer from "../../component/common/footer/Footer";
 
 const HomePage = () => {
   const [searchText, setSearchText] = useState("");
-
+  
   return (
     <div className="  w-screen h-screen ">
 
@@ -130,8 +131,13 @@ const HomePage = () => {
               <Heading />
           </div>
           {/* Over Products */}
-          <div className=" w-4/5 flex justify-between items-center p-0 mx-auto mt-36  ">
+          <div className=" w-4/5 flex justify-between items-center p-0 mx-auto mt-36 ">
             <AllProducts />
+          </div>
+
+          {/* Footer  */}
+          <div className=" w-4/5 h-full flex justify-between items-center p-0 mx-auto mt-36  ">
+             <Footer /> 
           </div>
     </div>
   );
