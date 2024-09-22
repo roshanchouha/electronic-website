@@ -17,7 +17,7 @@ const TodayCarousel = () => {
 
        {/* product cards  */}
        <div className="flex flex-col  items-center gap-1 ">
-          <div className=" flex flex-col lg:flex-row gap-4 mt-5 overflow-auto  h-[320px]  ">
+          <div className="  grid grid-cols-2 md:grid-cols-4 gap-4 mt-5 overflow-auto  h-[320px]  w-full ">
             <ProductCard image={videGameImg} />
             <ProductCard image={videGameImg} />
             <ProductCard image={videGameImg} />

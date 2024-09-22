@@ -10,7 +10,7 @@ const Header = ({title , subTitle , showShallTime}) => {
         <div className="flex items-center">
           <div className=" rounded bg-[#DB4444] p-1.5  h-7"></div>
           <div>
-            <h3 className=" font-poppins text-[16px] font-semibold  text-[#DB4444] mx-2">
+            <h3 className=" font-poppins text-[16px]  font-semibold  text-[#DB4444] mx-2">
                {title}
             </h3>
           </div>
@@ -18,7 +18,7 @@ const Header = ({title , subTitle , showShallTime}) => {
         {/* title */}
         <div className=" flex items-center justify-between w-full   h-3/4">
           <div className="flex  items-center ">
-            <div className="font-poppins text-xl font-bold place-items-end ">
+            <div className="font-poppins text-xs md:text-xl font-bold place-items-end ">
                {subTitle}
             </div>
             { showShallTime &&  <div className="flex gap-3 ml-12">
