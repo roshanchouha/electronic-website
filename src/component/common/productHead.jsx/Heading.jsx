@@ -13,12 +13,12 @@ import { MdOutlinePhoneIphone } from "react-icons/md";
 import Header from "../Heading/Header";
 const Heading = () => {
   return (
-    <div className="w-full h-52 ">
+    <div className="w-full h-auto ">
       {/* header */}
       <Header title="Categories" subTitle='Browse By Category'  showShallTime={false}/>
       
          {/* cards */}
-         <div className="flex flex-col lg:flex-row  justify-between mt-12">
+         <div className=" grid grid-cols-2 gap-2 md:grid-cols-6 justify-center place-items-center mt-12">
            <Cards image={<MdOutlinePhoneIphone />} name="Phone" />
            <Cards image={<HiOutlineComputerDesktop />} name="Computer" />
            <Cards image={<BsSmartwatch />} name="Smart Watch" />

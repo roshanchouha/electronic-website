@@ -6,9 +6,9 @@ import { Button } from '../common/button/Button'
 
 export const AllProducts = () => {
   return (
-    <div className='w-full h-52'>
+    <div className='w-full h-auto'>
         <Header title='Our Products' subTitle='Explore Our Products'/>  
-         <div className=" grid grid-cols-4 overflow-auto  h-[620px]  ">
+         <div className=" grid grid-cols-2  md:grid-cols-4 gap-2 overflow-auto   ">
             <ProductCard image={dogFood} tag='new' />
             <ProductCard image={dogFood} />
             <ProductCard image={dogFood} />
@@ -23,4 +23,4 @@ export const AllProducts = () => {
           </div>
     </div>
   )
-}
+} 

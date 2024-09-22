@@ -16,7 +16,7 @@ export default function LanguageSelect() {
 
   return (
     <div>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120, color:"white" }}>
+      <FormControl variant="standard" sx={{ m: 1, minWidth: 100, color:"white" }}>
         <InputLabel sx={{ color: "white",fontSize:'14px',  }} id="demo-simple-select-standard-label">LN</InputLabel>
         <Select
           labelId="demo-simple-select-standard-label"
