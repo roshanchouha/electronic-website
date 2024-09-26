@@ -27,7 +27,7 @@ const Carts = () => {
                       
                        <div className='flex justify-between items-center '> 
                          <p className='text-black text-xs'>Subtotal</p>
-                         <p className='text-black text-xs'>$356</p>
+                         <p className='text-black text-xs'>$350</p>
                       </div>
                       <div className='flex justify-between items-center '> 
                          <p className='text-black text-xs mt-2'>Shipping</p>
