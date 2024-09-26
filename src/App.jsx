@@ -6,7 +6,9 @@ import Home from './pages/home/HomePage'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Signup from './component/common/Signup/Signup'
 import HomeData from './component/HomeData/HomeData'
-
+import { router } from './utils/router'
+import Carts from './pages/cart/Carts'
+ 
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,10 +17,10 @@ const routes = createBrowserRouter([{
     element: <Home />,
     children: [
       { path: '/', element:  <HomeData />   },
-      { path: '/cart', element: <h1>Cart</h1> },
+      { path: router.cart, element: <Carts /> },
       { path: '/about', element: <h1>About Us</h1>},
-      {path: '/signup', element: <Signup/>},
-      {
+      { path: '/signup', element: <Signup/>},
+      { 
         path: '*',
         element: <h1>Not Found</h1>,
       }
