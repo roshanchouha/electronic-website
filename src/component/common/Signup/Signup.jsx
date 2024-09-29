@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
+import { Refresh } from "@mui/icons-material";
  
 const Signup = () => {
 
@@ -7,6 +9,15 @@ const Signup = () => {
    const handleTypeChaange = (type) => {
      setType(type);
    }
+
+   const blinkVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+  
+  useEffect(() => {
+    
+  },[type])
   return ( 
     <div>
       <div class="  bg-gray-100 text-gray-900 flex justify-center ">
@@ -21,7 +32,14 @@ const Signup = () => {
             ></div>
           </div>
           { type === 'signup' ?
-            <div class="lg:w-1/2 xl:w-5/12  p-7 ">
+            <motion.div
+             className="lg:w-1/2 xl:w-5/12 p-7"
+             initial="hidden"
+             animate="visible"
+             exit="hidden"
+             variants={blinkVariants}
+             transition={{ duration: 1.5, ease: "easeInOut" }}  // Blink effect
+           >
             <div class="mt-0 flex flex-col items-center ">
               <h1 class="font-poppins text-2xl xl:text-2xl font-bold">Sign up</h1>
               <div class="w-full flex-1 mt-3">
@@ -103,8 +121,15 @@ const Signup = () => {
                 </div>
               </div>
             </div>  
-          </div>
-             :  <div class="lg:w-1/2 xl:w-5/12  p-7 ">
+            </motion.div>
+             :    <motion.div
+    className="lg:w-1/2 xl:w-5/12 p-7"
+    initial="hidden"
+    animate="visible"
+    exit="hidden"
+    variants={blinkVariants}
+    transition={{ duration: 1.5, ease: "easeInOut" }}  // Blink effect
+  >
             <div class="mt-0 flex flex-col items-center ">
               <h1 class="font-poppins text-2xl xl:text-2xl font-bold">Login</h1>
               <div class="w-full flex-1 mt-3">
@@ -181,7 +206,7 @@ const Signup = () => {
                 </div>
               </div>
             </div>
-          </div>}
+            </motion.div>}
         </div>
       </div>
     </div>

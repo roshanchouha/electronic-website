@@ -8,6 +8,8 @@ import Signup from './component/common/Signup/Signup'
 import HomeData from './component/HomeData/HomeData'
 import { router } from './utils/router'
 import Carts from './pages/cart/Carts'
+import CheckOut from './pages/checkOut/CheckOut'
+ 
  
 function App() {
   const [count, setCount] = useState(0)
@@ -20,12 +22,15 @@ const routes = createBrowserRouter([{
       { path: router.cart, element: <Carts /> },
       { path: '/about', element: <h1>About Us</h1>},
       { path: '/signup', element: <Signup/>},
+      {
+        path: '/checkout' , element: <CheckOut />
+      },
       { 
         path: '*',
         element: <h1>Not Found</h1>,
       }
     ],
-}])
+},])
 
   return (
     <>
